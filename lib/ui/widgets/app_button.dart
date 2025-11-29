@@ -20,9 +20,10 @@ class AppButton extends StatelessWidget {
         onPressed: onTap,
         style: OutlinedButton.styleFrom(
           padding: const EdgeInsets.symmetric(
-            vertical: 10,
-            horizontal: 40,
+            vertical: 40,
+            horizontal: 80,
           ),
         ));
   }
 }
+ស
