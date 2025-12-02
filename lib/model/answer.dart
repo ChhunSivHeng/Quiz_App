@@ -1,11 +1,16 @@
+import 'question.dart';
+
 class Answer {
-  final String answerChoice;
+  final Question question;
+  final String anwerChoice;
 
   Answer({
-    required this.answerChoice,
+    required this.question,
+    required this.anwerChoice,
   });
 
-
-  bool isGood( String goodChoice ) => answerChoice == goodChoice;
-
+  // Returns true if the answer is correct
+  bool isCorrect() {
+    return anwerChoice == question.goodChoice;
+  }
 }
