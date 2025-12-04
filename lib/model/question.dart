@@ -8,4 +8,5 @@ class Question {
     required this.choices,
     required this.goodChoice,
   });
+  
 }

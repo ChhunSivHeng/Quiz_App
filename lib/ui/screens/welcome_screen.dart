@@ -5,7 +5,8 @@ import '../widgets/app_button.dart';
 
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+  final VoidCallback onStart;
+  const WelcomeScreen({super.key, required this.onStart});
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +22,13 @@ class WelcomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               AppButton(
-                'Start Quiz',
-                icon: Icons.quiz,
-                onTap: () {},
-          
-              ),
+                icon: Icons.play_arrow,
+                'Start Quiz', 
+                onTap: onStart,
+                )
             ],
           ),
-        )
-
-      
+        )    
       ),
     );
   }

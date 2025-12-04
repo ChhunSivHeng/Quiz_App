@@ -6,11 +6,13 @@ class AppButton extends StatelessWidget {
     super.key,
     required this.onTap,
     this.icon,
+    this.color,
   });
 
   final IconData? icon;
   final String label;
   final void Function() onTap;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +21,12 @@ class AppButton extends StatelessWidget {
         label: Text(label),
         onPressed: onTap,
         style: OutlinedButton.styleFrom(
+          backgroundColor: color,
           padding: const EdgeInsets.symmetric(
+            
             vertical: 40,
             horizontal: 80,
           ),
         ));
   }
 }
-ស

@@ -2,15 +2,14 @@ import 'question.dart';
 
 class Answer {
   final Question question;
-  final String anwerChoice;
+  final String selectedAnswer;
 
   Answer({
     required this.question,
-    required this.anwerChoice,
+    required this.selectedAnswer,
   });
 
-  // Returns true if the answer is correct
   bool isCorrect() {
-    return anwerChoice == question.goodChoice;
+    return selectedAnswer == question.goodChoice;
   }
 }
